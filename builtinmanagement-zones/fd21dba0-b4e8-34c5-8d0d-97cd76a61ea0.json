@@ -1,0 +1,10 @@
+{
+  "name": "BRAD - MonacoTest",
+  "rules": [
+    {
+      "enabled": true,
+      "type": "SELECTOR",
+      "entitySelector": "type(\"HOST\")"
+    }
+  ]
+}

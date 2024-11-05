@@ -1,0 +1,97 @@
+{
+  "name": "demo-sharvesh",
+  "description": "This is for training ",
+  "rules": [
+    {
+      "enabled": true,
+      "type": "SELECTOR",
+      "entitySelector": "type(wmi:com_dynatrace_extension_ad_instance),fromRelationships.runsOn(type(\"HOST\"), fromRelationships.isInstanceOf(type(HOST_GROUP),detectedName(26496_DNS-DHCP)))"
+    },
+    {
+      "enabled": true,
+      "type": "SELECTOR",
+      "entitySelector": "type(os:service),fromRelationships.runsOn(type(\"HOST\"), fromRelationships.isInstanceOf(type(HOST_GROUP),detectedName(26496_DNS-DHCP)))"
+    },
+    {
+      "enabled": true,
+      "type": "SELECTOR",
+      "entitySelector": "type(\"HOST\"), fromRelationships.isInstanceOf(type(HOST_GROUP),detectedName(26496_DNS-DHCP))"
+    },
+    {
+      "enabled": true,
+      "type": "ME",
+      "attributeRule": {
+        "entityType": "NETWORK_AVAILABILITY_MONITOR",
+        "conditions": [
+          {
+            "key": "NETWORK_AVAILABILITY_MONITOR_TAGS",
+            "operator": "EQUALS",
+            "tag": "mzdemo:sharvesh"
+          }
+        ]
+      }
+    },
+    {
+      "enabled": true,
+      "type": "ME",
+      "attributeRule": {
+        "entityType": "HTTP_MONITOR",
+        "conditions": [
+          {
+            "key": "HTTP_MONITOR_TAGS",
+            "operator": "EQUALS",
+            "tag": "mzdemo:sharvesh"
+          }
+        ]
+      }
+    },
+    {
+      "enabled": false,
+      "type": "SELECTOR",
+      "entitySelector": "type(dt.entity.multiprotocol_monitor),tag(mzdemo:sharvesh)"
+    },
+    {
+      "enabled": true,
+      "type": "ME",
+      "attributeRule": {
+        "entityType": "BROWSER_MONITOR",
+        "conditions": [
+          {
+            "key": "BROWSER_MONITOR_TAGS",
+            "operator": "EQUALS",
+            "tag": "mzdemo:sharvesh"
+          }
+        ]
+      }
+    },
+    {
+      "enabled": true,
+      "type": "ME",
+      "attributeRule": {
+        "entityType": "HOST",
+        "conditions": [
+          {
+            "key": "HOST_GROUP_ID",
+            "operator": "EQUALS",
+            "entityId": "{{ .extractedIDs.id_HOST_GROUP_93C87662F107FA62 }}"
+          }
+        ],
+        "hostToPGPropagation": false
+      }
+    },
+    {
+      "enabled": true,
+      "type": "ME",
+      "attributeRule": {
+        "entityType": "HOST_GROUP",
+        "conditions": [
+          {
+            "key": "HOST_GROUP_ID",
+            "operator": "EQUALS",
+            "entityId": "{{ .extractedIDs.id_HOST_GROUP_93C87662F107FA62 }}"
+          }
+        ]
+      }
+    }
+  ]
+}
