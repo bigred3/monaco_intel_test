@@ -1,0 +1,17 @@
+configs:
+- id: 68fa73d5-9331-3a73-a105-83a78ed81068
+  config:
+    parameters:
+      builtinmanagementzones__fd21dba0b4e834c58d0d97cd76a61ea0__id:
+        configId: fd21dba0-b4e8-34c5-8d0d-97cd76a61ea0
+        configType: builtin:management-zones
+        property: id
+        type: reference
+    template: 68fa73d5-9331-3a73-a105-83a78ed81068.json
+    skip: false
+    originObjectId: vu9U3hXa3q0AAAABABhidWlsdGluOmFsZXJ0aW5nLnByb2ZpbGUABnRlbmFudAAGdGVuYW50ACQzMzY2ZmIwZC0yMjFlLTM3MDAtYTU0YS1jZjNjYjczMTU3N2S-71TeFdrerQ
+  type:
+    settings:
+      schema: builtin:alerting.profile
+      schemaVersion: "8.5"
+      scope: environment
