@@ -15,3 +15,13 @@ configs:
       schema: builtin:alerting.profile
       schemaVersion: "8.5"
       scope: environment
+- id: fd21dba0-b4e8-34c5-8d0d-97cd76a61ea0
+  config:
+    template: fd21dba0-b4e8-34c5-8d0d-97cd76a61ea0.json
+    skip: false
+    originObjectId: vu9U3hXa3q0AAAABABhidWlsdGluOm1hbmFnZW1lbnQtem9uZXMABnRlbmFudAAGdGVuYW50ACQ2YjU0ZjYxZS03MWZhLTMxNjQtYTEzZi03MmVmODExYzEwM2W-71TeFdrerQ
+  type:
+    settings:
+      schema: builtin:management-zones
+      schemaVersion: 1.0.12
+      scope: environment
