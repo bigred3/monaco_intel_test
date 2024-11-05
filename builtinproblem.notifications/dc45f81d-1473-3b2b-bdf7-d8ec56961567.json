@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "type": "EMAIL",
+  "displayName": "BRAD - MonacoTest",
+  "emailNotification": {
+    "recipients": [
+      "bradley.danyo@dynatrace.com"
+    ],
+    "ccRecipients": [],
+    "bccRecipients": [],
+    "subject": "{State} Problem {ProblemID}: {ImpactedEntity}",
+    "notifyClosedProblems": true,
+    "body": "{ProblemDetailsHTML}"
+  },
+  "alertingProfile": "{{.builtinalertingprofile__68fa73d593313a73a10583a78ed81068__id}}"
+}

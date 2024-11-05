@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "type": "EMAIL",
+  "displayName": "Ledger alerts for ledger 34f7025ce47f437ea0ba2cd4f3f37df1",
+  "emailNotification": {
+    "recipients": [
+      "itp-alerts-dev@intel.com",
+      "lior.gal@intel.com"
+    ],
+    "ccRecipients": [],
+    "bccRecipients": [],
+    "subject": "{State} Problem {ProblemID}: {ImpactedEntity}",
+    "notifyClosedProblems": true,
+    "body": "{ProblemDetailsHTML}"
+  },
+  "alertingProfile": "{{.builtinalertingprofile__dfc04eda77dc3c7894e26dbbea71f418__id}}"
+}

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "type": "EMAIL",
+  "displayName": "m2r-coveo",
+  "emailNotification": {
+    "recipients": [
+      "reeni.mishra@intel.com"
+    ],
+    "ccRecipients": [],
+    "bccRecipients": [],
+    "subject": "{State} Problem {ProblemID}: {ImpactedEntity}",
+    "notifyClosedProblems": true,
+    "body": "{ProblemDetailsHTML}"
+  },
+  "alertingProfile": "{{.builtinalertingprofile__65e98561f7913a06a767093335b54910__id}}"
+}

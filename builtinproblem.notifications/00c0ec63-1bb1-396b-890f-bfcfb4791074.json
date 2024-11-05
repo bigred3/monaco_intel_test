@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "type": "WEBHOOK",
+  "displayName": "39317 - ActiveGate SN Disc",
+  "webHookNotification": {
+    "url": "https://integrations.bigpanda.io/oim/api/alerts",
+    "acceptAnyCertificate": false,
+    "notifyEventMergesEnabled": false,
+    "notifyClosedProblems": true,
+    "headers": [
+      {
+        "name": "x-auth-token",
+        "secret": false,
+        "value": "94f1c445ab6e3278e7cdb32d5fd8d7fa"
+      },
+      {
+        "name": "x-app-key",
+        "secret": false,
+        "value": "213f7dbba980c3e9d127adc3142956d3"
+      }
+    ],
+    "payload": "{\n     \"ImpactedEntity\": \"{ImpactedEntity}\",\n\"status\":\"{State}\",\n\"Check\":\"{ProblemTitle}\",\n\"host\":\"{ImpactedEntityNames}\", \n     \"PID\": \"{PID}\",\n     \"ProblemDetails\": \"{ProblemDetailsText}\",\n     \"ProblemDetailsJSON\": {ProblemDetailsJSON},\n     \"ProblemID\": \"{ProblemID}\",\n     \"ProblemImpact\": \"{ProblemImpact}\",\n     \"ProblemSeverity\": \"{ProblemSeverity}\",\n     \"ProblemTitle\": \"{ProblemTitle}\",\n     \"ProblemURL\": \"{ProblemURL}\",\n     \"Tags\": \"{Tags}\",\n\"cmdb_name\":\"Dynatrace\",\n\"event_category\":\"Tags[event_category]\",\n\"kb_article\":\"{Tags[kb_article]}\",\n\"supportteam\":\"Tags[supportteam]\",\n\"host_group\":\"{Tags[host_group]}\",\n\"xmatters\":\"{Tags[xmatters]}\",\n\"environment\":\"Sandbox\",\n\"description\":\"{ProblemDetailsText}\"\n }\n"
+  },
+  "alertingProfile": "{{.builtinalertingprofile__3958dfc1649b3132860caba4e75a6193__id}}"
+}
