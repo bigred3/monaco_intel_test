@@ -1,0 +1,52 @@
+{
+  "name": "Ledger alert profile for ledger 8ba44f450c434c8dad5d374bf3f5f420",
+  "managementZone": "{{.builtinmanagementzones__3148c322bf46365eb8c367e0f70f9df6__id}}",
+  "severityRules": [
+    {
+      "severityLevel": "MONITORING_UNAVAILABLE",
+      "delayInMinutes": 0,
+      "tagFilterIncludeMode": "NONE"
+    },
+    {
+      "severityLevel": "AVAILABILITY",
+      "delayInMinutes": 0,
+      "tagFilterIncludeMode": "NONE"
+    },
+    {
+      "severityLevel": "ERRORS",
+      "delayInMinutes": 0,
+      "tagFilterIncludeMode": "NONE"
+    },
+    {
+      "severityLevel": "PERFORMANCE",
+      "delayInMinutes": 30,
+      "tagFilterIncludeMode": "NONE"
+    },
+    {
+      "severityLevel": "RESOURCE_CONTENTION",
+      "delayInMinutes": 30,
+      "tagFilterIncludeMode": "NONE"
+    },
+    {
+      "severityLevel": "CUSTOM_ALERT",
+      "delayInMinutes": 0,
+      "tagFilterIncludeMode": "NONE"
+    }
+  ],
+  "eventFilters": [
+    {
+      "type": "CUSTOM",
+      "customFilter": {
+        "metadataFilter": {
+          "metadataFilterItems": [
+            {
+              "metadataKey": "MetricType",
+              "metadataValue": "{{ .extractedIDs.id_LedgerMetrics_8ba44f450c434c8d }}ad5d374bf3f5f420",
+              "negate": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
