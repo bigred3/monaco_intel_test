@@ -25,3 +25,19 @@ configs:
       schema: builtin:management-zones
       schemaVersion: 1.0.12
       scope: environment
+- id: dc45f81d-1473-3b2b-bdf7-d8ec56961567
+  config:
+    parameters:
+      builtinalertingprofile__68fa73d593313a73a10583a78ed81068__id:
+        configId: 68fa73d5-9331-3a73-a105-83a78ed81068
+        configType: builtin:alerting.profile
+        property: id
+        type: reference
+    template: dc45f81d-1473-3b2b-bdf7-d8ec56961567.json
+    skip: false
+    originObjectId: vu9U3hXa3q0AAAABAB1idWlsdGluOnByb2JsZW0ubm90aWZpY2F0aW9ucwAGdGVuYW50AAZ0ZW5hbnQAJDZmYTA0YTBkLWIyMTQtM2Y2MC1iZWM3LTg1OWFmODdlNTVlNL7vVN4V2t6t
+  type:
+    settings:
+      schema: builtin:problem.notifications
+      schemaVersion: "1.6"
+      scope: environment
