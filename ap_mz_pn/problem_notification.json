@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "type": "EMAIL",
+  "displayName": "{{.name}}",
+  "emailNotification": {
+    "recipients": [
+      "bradley.danyo@dynatrace.com"
+    ],
+    "ccRecipients": [],
+    "bccRecipients": [],
+    "subject": "{State} Problem {ProblemID}: {ImpactedEntity}",
+    "notifyClosedProblems": true,
+    "body": "{ProblemDetailsHTML}"
+  },
+  "alertingProfile": "{{.alert_profile_id}}"
+}

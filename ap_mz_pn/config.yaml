@@ -1,0 +1,46 @@
+configs:
+- id: management_zones
+  config:
+    name: MonacoTest_Two_MZ
+    template: management_zones.json
+    skip: false
+    originObjectId: vu9U3hXa3q0AAAABABhidWlsdGluOm1hbmFnZW1lbnQtem9uZXMABnRlbmFudAAGdGVuYW50ACRhOTFlOGQwYi0yMWQwLTNjZGEtYWM2MC1mNDc2NDkxYzUxZWG-71TeFdrerQ
+  type:
+    settings:
+      schema: builtin:management-zones
+      schemaVersion: 1.0.12
+      scope: environment
+- id: alert_profile
+  config:
+    name: MonacoTest_Two_AP
+    parameters:
+      management_zones:
+        configId: management_zones
+        configType: builtin:management-zones
+        property: id
+        type: reference
+    template: alert_profile.json
+    skip: false
+    originObjectId: vu9U3hXa3q0AAAABABhidWlsdGluOmFsZXJ0aW5nLnByb2ZpbGUABnRlbmFudAAGdGVuYW50ACRiODdlMGNlNy1kMTM2LTNjY2EtOTM2NC1mNTI4YjYwMTUyMze-71TeFdrerQ
+  type:
+    settings:
+      schema: builtin:alerting.profile
+      schemaVersion: "8.5"
+      scope: environment
+- id: problem_notification
+  config:
+    name: MonacoTest_Two_PN
+    parameters:
+      alert_profile_id:
+        configId: alert_profile
+        configType: builtin:alerting.profile
+        property: id
+        type: reference
+    template: problem_notification.json
+    skip: false
+    originObjectId: vu9U3hXa3q0AAAABAB1idWlsdGluOnByb2JsZW0ubm90aWZpY2F0aW9ucwAGdGVuYW50AAZ0ZW5hbnQAJGZlOTYyNzM3LTA0MjctMzQ0OC04YWM4LTgzM2Q0MmM3ZjJiYr7vVN4V2t6t
+  type:
+    settings:
+      schema: builtin:problem.notifications
+      schemaVersion: "1.6"
+      scope: environment
