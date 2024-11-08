@@ -1,0 +1,18 @@
+configs:
+  - id: synthetic_test
+    config:
+      name: google - monaco
+      parameters:
+        syntheticLocation:
+          type: value
+          value:
+            location_id_one: GEOLOCATION-57F63BAD1C6A415C
+            location_id_two: GEOLOCATION-741FF3927B22AC0D
+        monitorURL:
+          type: value
+          value:
+            url_name: www.google.com
+      template: synthetic_test.json
+      skip: false
+    type:
+      api: synthetic-monitor

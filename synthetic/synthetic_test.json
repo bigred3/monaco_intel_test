@@ -1,0 +1,71 @@
+{
+  "anomalyDetection": {
+      "loadingTimeThresholds": {
+          "enabled": true,
+          "thresholds": []
+      },
+      "outageHandling": {
+          "globalOutage": true,
+          "globalOutagePolicy": {
+              "consecutiveRuns": 1
+          },
+          "localOutage": false,
+          "localOutagePolicy": {
+              "affectedLocations": null,
+              "consecutiveRuns": null
+          },
+          "retryOnError": true
+      }
+  },
+  "automaticallyAssignedApps": [],
+  "enabled": false,
+  "events": [
+      {
+          "name": "Loading of \"{{.monitorURL.url_name}}\"",
+          "sequenceNumber": 1
+      }
+  ],
+  "frequencyMin": 5,
+  "keyPerformanceMetrics": {
+      "loadActionKpm": "VISUALLY_COMPLETE",
+      "xhrActionKpm": "VISUALLY_COMPLETE"
+  },
+  "locations": [
+    "{{.syntheticLocation.location_id_one}}",
+    "{{.syntheticLocation.location_id_two}}"
+  ],
+  "manuallyAssignedApps": [],
+  "name": "{{.name}}",
+  "script": {
+      "configuration": {
+          "chromiumStartupFlags": {
+              "disable-web-security": false
+          },
+          "device": {
+              "deviceName": "Desktop",
+              "orientation": "landscape"
+          }
+      },
+      "events": [
+          {
+              "description": "Loading of \"www.google.com\"",
+              "type": "navigate",
+              "url": "{{.monitorURL.url_name}}",
+              "wait": {
+                  "waitFor": "page_complete"
+              }
+          }
+      ],
+      "type": "availability",
+      "version": "1.0"
+  },
+  "tags": [
+      {
+          "context": "CONTEXTLESS",
+          "key": "mzdemo",
+          "source": "USER",
+          "value": "manisha"
+      }
+  ],
+  "type": "BROWSER"
+}
