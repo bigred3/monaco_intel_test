@@ -6,8 +6,8 @@ configs:
         syntheticLocation:
           type: value
           value:
-            location_id_one: GEOLOCATION-57F63BAD1C6A415C
-            location_id_two: GEOLOCATION-741FF3927B22AC0D
+            location_id_one: <REPLACE WITH SYNTHETIC LOCATION ID> ##e.g. SYNTHETI_LOCATION-123445
+            location_id_two: <REPLACE WITH SYNTHETIC LOCATION ID> ##e.g. SYNTHETI_LOCATION-123445
         monitorURL:
           type: value
           value:
