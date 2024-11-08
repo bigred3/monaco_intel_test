@@ -1,5 +1,0 @@
-{
-  "matcher": "{{.matcher}}",
-  "pattern": "{{.pattern}}",
-  "applicationId": "{{.applicationId}}"
-}
