@@ -1,0 +1,83 @@
+manifestVersion: 1.0
+projects:
+  - name: ap_mz_pn
+    path: ap_mz_pn
+  - name: 12345_synthetic
+    path: 12345_synthetic
+  - name: redeploy_alert_profile
+    path: redeploy_alert_profile
+  - name: template
+    path: template
+environmentGroups:
+  - name: Sandbox
+    environments:
+      - name: sandbox
+        url:
+          type: environment
+          value: SANDBOX_URL
+        auth:
+          token:
+            type: environment
+            name: SANDBOX_TOKEN
+          oAuth:
+            clientId:
+              type: environment
+              name: CLIENT_ID
+            clientSecret:
+              type: environment
+              name: CLIENT_SECRET
+            tokenEndpoint:
+              value: https://sso.dynatrace.com/sso/oauth2/token
+  - name: Pre-Prod
+    environments:
+      - name: amr_preprod
+        url:
+          type: environment
+          value: AMR_PP_URL
+        auth:
+          token:
+            type: environment
+            name: AMR_PP_TOKEN
+          oAuth:
+            clientId:
+              type: environment
+              name: CLIENT_ID
+            clientSecret:
+              type: environment
+              name: CLIENT_SECRET
+            tokenEndpoint:
+              value: https://sso.dynatrace.com/sso/oauth2/token
+      - name: gar_preprod
+        url:
+          type: environment
+          value: GAR_PP_URL
+        auth:
+          token:
+            type: environment
+            name: GAR_PP_TOKEN
+          oAuth:
+            clientId:
+              type: environment
+              name: CLIENT_ID
+            clientSecret:
+              type: environment
+              name: CLIENT_SECRET
+            tokenEndpoint:
+              value: https://sso.dynatrace.com/sso/oauth2/token
+      - name: ger_preprod
+        url:
+          type: environment
+          value: GER_PP_URL
+        auth:
+          token:
+            type: environment
+            name: GER_PP_TOKEN
+          oAuth:
+            clientId:
+              type: environment
+              name: CLIENT_ID
+            clientSecret:
+              type: environment
+              name: CLIENT_SECRET
+            tokenEndpoint:
+              value: https://sso.dynatrace.com/sso/oauth2/token
